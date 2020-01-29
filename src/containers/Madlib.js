@@ -23,9 +23,7 @@ export default class Madlib extends Component{
   toggleResult = () =>
     this.setState(state => ({ ...state, showResult: !state.showResult }));
 
-  handleChange = ({ target }) => this.setState({ ['']: target.value }, () => {
-    console.log(this.state.val0);
-  });
+  handleChange = ({ target }) => this.setState({ [target.name]: target.value });
 
   handleSubmit = event => {
     event.preventDefault();
@@ -36,7 +34,7 @@ export default class Madlib extends Component{
     const { showResult } = this.state;
     return (
       <>
-        {!showResult && <Form onSubmit={this.handleSubmit} onChange=(this.handleChange) />}
+        {!showResult && <Form onSubmit={this.handleSubmit} onChange={this.handleChange} />}
         {showResult && <Result words={[]} closeResult={this.toggleResult} />}
       </>
     );
