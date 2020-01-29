@@ -21,7 +21,19 @@ const Form = ({ onSubmit, val0, val1, val2, val3, val4, val5, val6, val7, val8, 
 );
 
 Form.propTypes = {
-  onSubmit: PropTypes.func.isRequired
+  onSubmit: PropTypes.func.isRequired, 
+  val0: PropTypes.string.isRequired,
+  val1: PropTypes.string.isRequired,
+  val2: PropTypes.string.isRequired,
+  val3: PropTypes.string.isRequired,
+  val4: PropTypes.string.isRequired,
+  val5: PropTypes.string.isRequired,
+  val6: PropTypes.string.isRequired,
+  val7: PropTypes.string.isRequired,
+  val8: PropTypes.string.isRequired,
+  val9: PropTypes.string.isRequired,
+  val10: PropTypes.string.isRequired,
+  val11: PropTypes.string.isRequired,
 };
 
 export default Form;
