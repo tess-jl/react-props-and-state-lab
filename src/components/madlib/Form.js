@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Form = ({ onSubmit, onChange, word0, word1, word2, word3, word4, word5, word6, word7, word8, word9, word10, word11 }) => (
 
-  <form onSubmit={onSubmit} onChange={onChange}>
+  <form onSubmit={onSubmit} onChange={onChange} >
     <input type="text" name='word0' value={word0} placeholder="adjective" />
     <input type="text" name='word1' value={word1} placeholder="noun" />
     <input type="text" name='word2' value={word2} placeholder="verb, past tense" />
@@ -16,7 +16,8 @@ const Form = ({ onSubmit, onChange, word0, word1, word2, word3, word4, word5, wo
     <input type="text" name='word9' value={word9} placeholder="adverb" />
     <input type="text" name='word10' value={word10}placeholder="verb, past tense" />
     <input type="text" name='word11' value={word11} placeholder="adjective" />
-    <button>Create Madlib</button>
+    <button type="submit">submit</button> 
+    <button type="reset">reset</button>
   </form>
 );
 
@@ -34,7 +35,8 @@ Form.propTypes = {
   word9: PropTypes.string.isRequired,
   word10: PropTypes.string.isRequired,
   word11: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired, 
+  label: PropTypes.string.isRequired
 };
 
 export default Form;
