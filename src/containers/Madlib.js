@@ -6,24 +6,26 @@ export default class Madlib extends Component{
   state = {
     showResult: false, 
     words: [],
-    val0: '',
-    val1: '', 
-    val2: '',  
-    val3: '', 
-    val4: '', 
-    val5: '', 
-    val6: '', 
-    val7: '', 
-    val8: '', 
-    val9: '', 
-    val10: '', 
-    val11: '' 
+    word0: '',
+    word1: '', 
+    word2: '',  
+    word3: '', 
+    word4: '', 
+    word5: '', 
+    word6: '', 
+    word7: '', 
+    word8: '', 
+    word9: '', 
+    word10: '', 
+    word11: '' 
   }
 
   toggleResult = () =>
     this.setState(state => ({ ...state, showResult: !state.showResult }));
 
-  packageWords = ({ target }) => this.setState({ words: [...target.value] });
+  handleChange = ({ target }) => this.setState({ ['']: target.value }, () => {
+    console.log(this.state.val0);
+  });
 
   handleSubmit = event => {
     event.preventDefault();
@@ -34,7 +36,7 @@ export default class Madlib extends Component{
     const { showResult } = this.state;
     return (
       <>
-        {!showResult && <Form onSubmit={this.handleSubmit} />}
+        {!showResult && <Form onSubmit={this.handleSubmit} onChange=(this.handleChange) />}
         {showResult && <Result words={[]} closeResult={this.toggleResult} />}
       </>
     );
