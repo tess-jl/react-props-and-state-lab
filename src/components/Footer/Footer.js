@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './Footer.css';
 
 const Footer = () => (
   <>
-    <p>footer</p>
+    <p className={styles.Footer}>ACL Madlibs 2020</p>
   </>
 );
 

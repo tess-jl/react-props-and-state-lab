@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './Header.css';
 
 const Header = () => (
   <>
-    <h1>Madlibs 2.0</h1>
+    <h1 className={styles.Header}>Madlibs 2.0</h1>
   </>
 );
 
