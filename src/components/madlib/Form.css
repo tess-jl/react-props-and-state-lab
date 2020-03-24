@@ -1,0 +1,19 @@
+.Form {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  background: rgb(27, 37, 27); 
+
+  input{
+    border-radius: 5px;
+    margin: 5px; 
+  }
+
+  button {
+    background-color: rgb(255, 212, 195);
+    border-radius: 5px;
+    margin: 3px; 
+  }
+}
